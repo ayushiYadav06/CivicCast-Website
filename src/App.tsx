@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Navigation } from './components/Navigation';
+import { SecondHeader } from './components/SecondHeader';
 import { Home } from './components/Home';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
@@ -61,6 +62,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
+      <SecondHeader />
       <main className="flex-1">
         {renderPage()}
       </main>
