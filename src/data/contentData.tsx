@@ -76,7 +76,7 @@ export const contentData: Record<string, CategoryContent> = {
         id: 1,
         title: "नगर निगम की नई पहल: सफाई अभियान",
         titleEn: "Municipal Corporation's Cleanliness Drive",
-        youtubeId: "dQw4w9WgXcQ",
+        youtubeId: "E2vCyynLkiU",
         thumbnail: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b",
         date: "17 Sept 2025",
       },
@@ -84,9 +84,25 @@ export const contentData: Record<string, CategoryContent> = {
         id: 2,
         title: "वार्ड समिति की बैठक: मुख्य निर्णय",
         titleEn: "Ward Committee Meeting Highlights",
-        youtubeId: "dQw4w9WgXcQ",
+        youtubeId: "BBe0towNtvM",
         thumbnail: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2",
         date: "14 Sept 2025",
+      },
+      {
+        id: 3,
+        title: "स्थानीय सुशासन: नगर विकास की नई दिशा",
+        titleEn: "Local Governance: New Direction",
+        youtubeId: "9oBE25YpKR0",
+        thumbnail: "https://images.unsplash.com/photo-1577962917302-cd874c4e31d2",
+        date: "12 Sept 2025",
+      },
+      {
+        id: 4,
+        title: "शहरी विकास और प्रगति रिपोर्ट",
+        titleEn: "Urban Development and Progress Report",
+        youtubeId: "fHBR1j1kJ1I",
+        thumbnail: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+        date: "10 Sept 2025",
       },
     ],
   },
@@ -123,16 +139,7 @@ export const contentData: Record<string, CategoryContent> = {
         date: "16 Sept 2025",
       },
     ],
-    videos: [
-      {
-        id: 1,
-        title: "नागरिकों की आवाज: पानी संकट पर विशेष रिपोर्ट",
-        titleEn: "Citizens Voice: Water Crisis Special Report",
-        youtubeId: "dQw4w9WgXcQ",
-        thumbnail: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64",
-        date: "15 Sept 2025",
-      },
-    ],
+    videos: [],
   },
 
   /* 3️⃣ प्रगति पथ */
@@ -167,19 +174,10 @@ export const contentData: Record<string, CategoryContent> = {
         date: "13 Sept 2025",
       },
     ],
-    videos: [
-      {
-        id: 1,
-        title: "स्मार्ट सिटी प्रोजेक्ट: प्रगति रिपोर्ट",
-        titleEn: "Smart City Project: Progress Report",
-        youtubeId: "dQw4w9WgXcQ",
-        thumbnail: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000",
-        date: "14 Sept 2025",
-      },
-    ],
+    videos: [],
   },
 
-  /* 4️⃣ आपराधिक सतर्कता */
+  /* 5️⃣ ग्राउंड रिपोर्ट */
   "crime-alert": {
     news: [
       {
@@ -204,8 +202,6 @@ export const contentData: Record<string, CategoryContent> = {
     ],
     videos: [],
   },
-
-  /* 5️⃣ ग्राउंड रिपोर्ट */
   "ground-report": {
     news: [
       {
@@ -236,16 +232,7 @@ export const contentData: Record<string, CategoryContent> = {
         date: "12 Sept 2025",
       },
     ],
-    videos: [
-      {
-        id: 1,
-        title: "जलभराव की समस्या: ग्राउंड रिपोर्ट",
-        titleEn: "Waterlogging Issue: Ground Report",
-        youtubeId: "dQw4w9WgXcQ",
-        thumbnail: "https://images.unsplash.com/photo-1547036967-23d11aacaee0",
-        date: "11 Sept 2025",
-      },
-    ],
+    videos: [],
   },
 
   /* 6️⃣ CivicCast Special */

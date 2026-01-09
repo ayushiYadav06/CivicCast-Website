@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { contentData, VideoItem } from '../data/contentData';
-import { Video, X } from 'lucide-react';
+import { Video, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ITEMS_PER_PAGE = 3;
 
@@ -31,34 +31,36 @@ export function NewsVideoCarousel() {
       {/* VIDEO MODAL */}
       {selectedVideo && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black bg-opacity-95 z-[9999] flex items-center justify-center p-4"
           onClick={() => setSelectedVideo(null)}
         >
           <div 
-            className="relative w-full max-w-5xl"
+            className="relative w-full max-w-6xl"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setSelectedVideo(null)}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+              className="absolute -top-14 right-0 text-white hover:text-gray-300 transition-colors z-10"
+              aria-label="Close video"
             >
-              <X className="w-8 h-8" />
+              <X className="w-10 h-10" />
             </button>
             
-            <div className="relative pt-[56.25%] bg-black rounded-lg overflow-hidden">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
               <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?autoplay=1`}
+                className="absolute top-0 left-0 w-full h-full rounded-lg"
+                src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?autoplay=1&rel=0&modestbranding=1`}
                 title={selectedVideo.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
+                frameBorder="0"
               ></iframe>
             </div>
             
-            <div className="mt-4 text-white">
-              <h3 className="text-xl font-semibold mb-1">{selectedVideo.title}</h3>
+            <div className="mt-6 text-white bg-black bg-opacity-50 p-4 rounded-lg">
+              <h3 className="text-2xl font-bold mb-2">{selectedVideo.title}</h3>
               {selectedVideo.titleEn && (
-                <p className="text-gray-300">{selectedVideo.titleEn}</p>
+                <p className="text-gray-300 text-lg">{selectedVideo.titleEn}</p>
               )}
             </div>
           </div>
@@ -173,6 +175,34 @@ export function NewsVideoCarousel() {
               }`}
             />
           ))}
+        </div>
+
+        {/* NAVIGATION BUTTONS BELOW DOTS */}
+        <div className="flex justify-center gap-4 mt-6">
+          <button
+            onClick={handlePrev}
+            aria-label="Previous page"
+            className="w-12 h-12 rounded-full bg-white shadow-lg
+                       flex items-center justify-center
+                       border-2 border-gray-200
+                       hover:border-red-600 hover:bg-red-50
+                       active:scale-95
+                       transition-all duration-300 ease-out"
+          >
+            <ChevronLeft className="w-6 h-6 text-gray-700" strokeWidth={2.5} />
+          </button>
+          <button
+            onClick={handleNext}
+            aria-label="Next page"
+            className="w-12 h-12 rounded-full bg-white shadow-lg
+                       flex items-center justify-center
+                       border-2 border-gray-200
+                       hover:border-red-600 hover:bg-red-50
+                       active:scale-95
+                       transition-all duration-300 ease-out"
+          >
+            <ChevronRight className="w-6 h-6 text-gray-700" strokeWidth={2.5} />
+          </button>
         </div>
 
       </div>

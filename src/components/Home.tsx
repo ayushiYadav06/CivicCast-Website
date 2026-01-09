@@ -597,63 +597,11 @@ export function Home() {
                   </div>
                 )}
 
-                {/* Videos Section */}
-                {contentData[selectedCategory.id].videos.length > 0 && (
-                  <div>
-                    <div className="flex items-center gap-3 mb-6">
-                      <PlayCircle className="w-6 h-6 text-red-600" />
-                      <h3 className="text-2xl font-bold">Video Reports</h3>
-                      <div className="h-px flex-1 bg-gray-200"></div>
-                    </div>
-                    <div className="grid md:grid-cols-2 gap-6">
-                      {contentData[selectedCategory.id].videos.map((item) => (
-                        <div
-                          key={item.id}
-                          className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all cursor-pointer border border-gray-100"
-                        >
-                          <div className="relative h-32 overflow-hidden bg-gray-900">
-                            <ImageWithFallback
-                              src={item.thumbnail || 'https://images.unsplash.com/photo-1611162617474-5b21e879e113'}
-                              alt={item.title}
-                              className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity"
-                            />
-                            <div className="absolute inset-0 flex items-center justify-center">
-                              <div className="bg-red-600 rounded-full p-3 group-hover:scale-110 transition-transform shadow-xl">
-                                <PlayCircle className="w-8 h-8 text-white" />
-                              </div>
-                            </div>
-                            {item.date && (
-                              <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs">
-                                {item.date}
-                              </div>
-                            )}
-                          </div>
-                          <div className="p-5">
-                            <h4 className="text-lg font-bold mb-2 line-clamp-2 group-hover:text-red-600 transition-colors">
-                              {item.title}
-                            </h4>
-                            {item.titleEn && (
-                              <p className="text-sm text-gray-600 mb-4">
-                                {item.titleEn}
-                              </p>
-                            )}
-                            <div className="flex items-center gap-2 text-red-600 text-sm font-semibold">
-                              <PlayCircle className="w-4 h-4" />
-                              <span>Watch Video</span>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
                 {/* No Content Message */}
-                {contentData[selectedCategory.id].news.length === 0 && 
-                 contentData[selectedCategory.id].videos.length === 0 && (
+                {contentData[selectedCategory.id].news.length === 0 && (
                   <div className="text-center py-12 bg-gray-50 rounded-xl">
                     <Newspaper className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-                    <p className="text-gray-500 text-lg">No news or videos available yet for this category.</p>
+                    <p className="text-gray-500 text-lg">No news available yet for this category.</p>
                   </div>
                 )}
               </div>
